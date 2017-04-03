@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Configuration file used to deploy a Meteor application from source
-# Duplicate the file and change the settings in order to use for your own app
-# Make sure the file can be executed as a program
+# Duplicate the file inside the "./configs/" folder and change the settings in order to use for your own app
 
 # Deployment config for: My App
 
