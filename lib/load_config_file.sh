@@ -27,7 +27,7 @@ load_config_file()
 			string+=")"
 
 			## Show the menu. This will list all files and the string "quit"
-			select file in "${files[@]}" "manual" "skip"
+			select file in "${files[@]}" "Manual file select" "Skip config file"
 			do
 			    case $file in
 				    ## If the choice is one of the files (if it matches $string)
@@ -36,14 +36,14 @@ load_config_file()
 				        break
 			        ;;
 
-				    "manual")
+				    "Manual file select")
 				        echo "Input full path to .sh configuration file (and press Enter): "
 				        read BASH_CONFIG_FILE
 				        source ${BASH_CONFIG_FILE}
 				        break
 				    ;;
 
-				    "skip")
+				    "Skip config file")
 						echo ""
 						echo ""
 				        echo "Skipping configuration file! Add the required parameters manually!"

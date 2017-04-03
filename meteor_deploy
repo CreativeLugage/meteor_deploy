@@ -37,7 +37,7 @@ meteor_deploy()
 	echo "3. Check remote server dependencies"
 	echo "4. Setup remote server"
 	echo "5. Sign Android APKs (if needed)"
-	echo "0. Exit (q)"
+	echo "0. Exit [q]"
 	echo ""
 
 	read -r -p "Choose an option: " input
