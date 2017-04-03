@@ -1,6 +1,6 @@
 deploy_remote_bundle()
 {
-	read -r -p "Deploy application bundle? [(Y)es/(N)o/(Q)uit] " input_deploy_remote
+	read -r -p "Deploy application bundle? [Y/n/q] " input_deploy_remote
 
 	case $input_deploy_remote in
 	    [yY][eE][sS]|[yY])

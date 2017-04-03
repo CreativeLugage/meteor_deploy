@@ -1,6 +1,6 @@
 sign_android_apks()
 {
-	read -r -p "Sign the Android APK files? [(Y)es/(N)o/(Q)uit] " input_sign
+	read -r -p "Sign the Android APK files? [Y/n/q] " input_sign
 
 	case $input_sign in
 	    [yY][eE][sS]|[yY])
