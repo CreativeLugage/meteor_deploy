@@ -128,7 +128,7 @@ During development, the Meteor runtime takes care of starting MongoDB for you. M
 
 You can install MongoDB from [www.mongodb.org](www.mongodb.org). While you can also install MongoDB via a package manager (apt-get), please note that this might be an outdated or even unsupported version.
 
->See also: mongoDB security checklist (notably the bindIp). 
+>See also: [mongoDB security checklist](https://docs.mongodb.com/master/administration/security-checklist/) (notably the bindIp). 
 
 ## Configuring Nginx and Passenger
 
