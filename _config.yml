@@ -1,3 +1,3 @@
 theme: jekyll-theme-cayman
-title: deployMET | Meteor Deployment - The BASH script!
+title: deployMET | BASH Meteor Deployment!
 description: Bash script for easy Meteor.js deployment to remote server (Ubuntu with NGINX, Passenger) over SSH; needs remote server already configured.
