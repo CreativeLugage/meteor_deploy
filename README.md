@@ -73,8 +73,8 @@ If you don't see a commented version of include /etc/nginx/passenger.conf; insid
  
  	http {
  	    include /etc/nginx/passenger.conf;
- 		...
-	 }
+ 	    ...
+	}
 
 When you are finished with this step, restart Nginx:
 
