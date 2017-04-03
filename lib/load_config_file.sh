@@ -51,7 +51,7 @@ load_config_file()
 				    
 				    *)
 				        file=""
-				        echo "Please choose a number from 1 to $((${#files[@]}+1))"
+				        echo "Please choose a number from 1 to $((${#files[@]}+2))"
 			        ;;
 
 			    esac
