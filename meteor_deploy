@@ -20,6 +20,7 @@ SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 
 # Make all lib scripts executable
 chmod +x -R ${SCRIPTPATH}/lib/*.sh
+chmod +x -R ${SCRIPTPATH}/configs/*.sh
 
 # Load configuration file
 source "${SCRIPTPATH}/lib/load_config_file.sh"
