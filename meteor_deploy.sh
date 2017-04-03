@@ -21,6 +21,13 @@ SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 # Make all lib scripts executable
 chmod +x -R ${SCRIPTPATH}/lib/*.sh
 
+# MAIN MENU:
+# 1. Deploy Meteor.js application
+# 2. Check local dependencies
+# 3. Check remote server dependencies
+# 4. Setup remote server
+# 5. Sign Android APKs (if needed)
+
 # Install local system dependencies
 source "${SCRIPTPATH}/lib/install_local_dependencies.sh"
 
