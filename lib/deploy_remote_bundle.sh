@@ -1,8 +1,8 @@
 deploy_remote_bundle()
 {
-	read -r -p "Deploy application bundle? [Y/n/q] " input
+	read -r -p "Deploy application bundle? [Y/n/q] " input_deploy_remote
 
-	case $input in
+	case $input_deploy_remote in
 	    [yY][eE][sS]|[yY])
 			echo "Deploying the application bundle..."
 
@@ -57,6 +57,8 @@ deploy_remote_bundle()
 
 	    [nN][oO]|[nN])
 			echo "Deployment canceled!"
+			echo ""
+			meteor_deploy
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])

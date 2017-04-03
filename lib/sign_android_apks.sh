@@ -1,8 +1,8 @@
 sign_android_apks()
 {
-	read -r -p "Sign the Android APK files? [Y/n/q] " input
+	read -r -p "Sign the Android APK files? [Y/n/q] " input_sign
 
-	case $input in
+	case $input_sign in
 	    [yY][eE][sS]|[yY])
 			echo "Signing the Android APK Files..."
 
@@ -35,7 +35,10 @@ sign_android_apks()
 		;;
 
 	    [nN][oO]|[nN])
-			echo "Skipping signing the Android APK Files!"
+			# echo "Skipping signing the Android APK Files!"
+			# echo ""
+
+			meteor_deploy
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])

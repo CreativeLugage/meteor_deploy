@@ -1,8 +1,8 @@
 upload_application_bundle()
 {
-	read -r -p "Upload application bundle to the remote server? [Y/n/q] " input
+	read -r -p "Upload application bundle to the remote server? [Y/n/q] " input_upload
 
-	case $input in
+	case $input_upload in
 	    [yY][eE][sS]|[yY])
 			echo "Uploading the application bundle..."
 
@@ -47,6 +47,7 @@ upload_application_bundle()
 
 	    [nN][oO]|[nN])
 			echo "Uploading application bundle canceled! Using previously uploaded bundle."
+			echo ""
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])

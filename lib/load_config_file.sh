@@ -1,8 +1,8 @@
 load_config_file()
 {
-	read -r -p "Use a bash configuration file? [Y/n/q] " input
+	read -r -p "Use a bash configuration file? [Y/n/q] " input_config
 
-	case $input in
+	case $input_config in
 	    [yY][eE][sS]|[yY])
 			
 			echo "Input full path to .sh configuration file (and press Enter): "
@@ -13,6 +13,7 @@ load_config_file()
 
 	    [nN][oO]|[nN])
 			echo "Skipping configuration file! Add the required parameters manually!"
+			echo ""
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])

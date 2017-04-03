@@ -23,9 +23,9 @@ fi
 
 if [[ "$_java" ]]; then
     version=$("$_java" -version 2>&1 | awk -F '"' '/version/ {print $2}')
-    echo version "$version"
+    # echo version "$version"
     if [[ "$version" > "1.7" ]]; then
-        echo version is more than 1.7 "[OK]"
+        echo "java" version is more than 1.7 "[OK]"
     else         
         echo version is less than 1.7
 		echo -e "Updating java..."
@@ -63,3 +63,5 @@ fi
 
 echo ""
 echo ""
+
+meteor_deploy

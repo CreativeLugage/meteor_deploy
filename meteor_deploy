@@ -21,38 +21,90 @@ SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 # Make all lib scripts executable
 chmod +x -R ${SCRIPTPATH}/lib/*.sh
 
+# Load configuration file
+source "${SCRIPTPATH}/lib/load_config_file.sh"
+
 meteor_deploy()
 {
+	echo ""
+	echo "--== Meteor.js Deploy ==--"
+	echo ""
+
 	# MAIN MENU:
-	# 1. Deploy Meteor.js application
-	# 2. Check local dependencies
-	# 3. Check remote server dependencies
-	# 4. Setup remote server
-	# 5. Sign Android APKs (if needed)
+	echo "1. Deploy Meteor.js application"
+	echo "2. Check local dependencies"
+	echo "3. Check remote server dependencies"
+	echo "4. Setup remote server"
+	echo "5. Sign Android APKs (if needed)"
+	echo "0. Exit (q)"
+	echo ""
 
-	# Install local system dependencies
-	source "${SCRIPTPATH}/lib/install_local_dependencies.sh"
+	read -r -p "Choose an option: " input
 
-	# Load configuration file
-	source "${SCRIPTPATH}/lib/load_config_file.sh"
+	echo ""
+	echo ""
 
-	# Build new app bundle
-	source "${SCRIPTPATH}/lib/build_new_bundle.sh"
+	case $input in
+	    [1])
+			# Build new app bundle
+			source "${SCRIPTPATH}/lib/build_new_bundle.sh"
 
-	# Sign Android APKs
-	source "${SCRIPTPATH}/lib/sign_android_apks.sh"
+			# Upload app bundle to remote server
+			source "${SCRIPTPATH}/lib/upload_application_bundle.sh"
+			
+			# Deploy app bundle on remote server
+			source "${SCRIPTPATH}/lib/deploy_remote_bundle.sh"
+		;;
 
-	# Upload app bundle to remote server
-	source "${SCRIPTPATH}/lib/upload_application_bundle.sh"
+		[2])
+			# Install local system dependencies
+			source "${SCRIPTPATH}/lib/install_local_dependencies.sh"
+		;;
 
-	# Install remote system dependencies
-	# 
-	# 
-	# 
-	# source "${SCRIPTPATH}/lib/install_remote_dependencies.sh"
+		[3])
+			# Install remote system dependencies
+			# 
+			# 
+			# 
+			# source "${SCRIPTPATH}/lib/install_remote_dependencies.sh"
 
-	# Deploy app bundle on remote server
-	source "${SCRIPTPATH}/lib/deploy_remote_bundle.sh"
+			echo ""
+			echo "INFO: This feature is not yet implemented"
+
+			meteor_deploy
+		;;
+
+		[4])
+			# Setup remote server
+			# 
+			# 
+			# 
+			# source "${SCRIPTPATH}/lib/setup_remote_server.sh"
+
+			echo ""
+			echo "INFO: This feature is not yet implemented"
+
+			meteor_deploy
+		;;
+
+		[5])
+			# Sign Android APKs
+			source "${SCRIPTPATH}/lib/sign_android_apks.sh"
+		;;
+
+		# [nN][oO]|[nN])
+		# 	echo "Deployment canceled!"
+		# ;;
+
+		[qQ][uU][iI][tT]|[qQ]|[0])
+			exit 1
+		;;
+
+	    *)
+			echo "Invalid input..."
+			meteor_deploy
+		;;
+	esac
 
 	# END
 }

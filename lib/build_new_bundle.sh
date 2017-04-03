@@ -1,8 +1,8 @@
 build_application_bundle()
 {
-	read -r -p "Build a new application bundle from source? [Y/n/q] " input
+	read -r -p "Build a new application bundle from source? [Y/n/q] " input_build
 
-	case $input in
+	case $input_build in
 	    [yY][eE][sS]|[yY])
 			echo "Building the new application bundle..."
 
@@ -34,6 +34,7 @@ build_application_bundle()
 
 	    [nN][oO]|[nN])
 			echo "Skiping building a new application bundle! Using existing bundled version."
+			echo ""
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])
