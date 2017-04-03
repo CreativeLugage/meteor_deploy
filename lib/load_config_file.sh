@@ -44,8 +44,9 @@ load_config_file()
 				    ;;
 
 				    "skip")
-				        echo "Skipping configuration file! Add the required parameters manually!"
 						echo ""
+						echo ""
+				        echo "Skipping configuration file! Add the required parameters manually!"
 						break
 					;;
 				    
@@ -60,8 +61,9 @@ load_config_file()
 		;;
 
 	    [nN][oO]|[nN])
-			echo "Skipping configuration file! Add the required parameters manually!"
 			echo ""
+			echo ""
+			echo "Skipping configuration file! Add the required parameters manually!"
 		;;
 
 		[qQ][uU][iI][tT]|[qQ])
