@@ -1,6 +1,6 @@
 load_config_file()
 {
-	read -r -p "Use a bash configuration file? [Y/n/q] " input_config
+	read -r -p "Use a bash configuration file? [(Y)es/(N)o/(Q)uit] " input_config
 
 	case $input_config in
 	    [yY][eE][sS]|[yY])

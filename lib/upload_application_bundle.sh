@@ -1,6 +1,6 @@
 upload_application_bundle()
 {
-	read -r -p "Upload application bundle to the remote server? [Y/n/q] " input_upload
+	read -r -p "Upload application bundle to the remote server? [(Y)es/(N)o/(Q)uit] " input_upload
 
 	case $input_upload in
 	    [yY][eE][sS]|[yY])

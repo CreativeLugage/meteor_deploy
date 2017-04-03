@@ -1,6 +1,6 @@
 build_application_bundle()
 {
-	read -r -p "Build a new application bundle from source? [Y/n/q] " input_build
+	read -r -p "Build a new application bundle from source? [(Y)es/(N)o/(Q)uit] " input_build
 
 	case $input_build in
 	    [yY][eE][sS]|[yY])
