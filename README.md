@@ -1,6 +1,8 @@
 # meteor_deploy
 Bash script for easy Meteor.js deployment to remote server (Ubuntu with NGINX, Passenger) over SSH; needs remote server already configured
 
+> You can use the "meteor_deploy_config.sh" file provided as a template to create your oun configuration files for the script. Just copy the file in your "./configs/" folder and rename it for easy identification and it will appear as an option in the "config file" menu while running the script.
+
 # Install remote server dependencies
 
 You can use the tutorial below to install and configure MongoDB, Nginx and Passenger on the remote server
