@@ -22,10 +22,6 @@ SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 chmod +x -R ${SCRIPTPATH}/lib/*.sh
 
 # Install local system dependencies
-# 
-# sudo apt-get update
-# sudo apt-get install jarsigner sshpass rsync
-# 
 source "${SCRIPTPATH}/lib/install_local_dependencies.sh"
 
 # Load configuration file

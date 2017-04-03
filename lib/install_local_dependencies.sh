@@ -1,7 +1,5 @@
 echo "Checking local dependencies..."
 
-echo ""
-
 # java:jarsigner, sshpass, rsync
 
 if type -p java; then
