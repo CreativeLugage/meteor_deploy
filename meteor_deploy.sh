@@ -21,6 +21,13 @@ SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 # Make all lib scripts executable
 chmod +x -R ${SCRIPTPATH}/lib/*.sh
 
+# Install local system dependencies
+# 
+# sudo apt-get update
+# sudo apt-get install jarsigner sshpass rsync
+# 
+source "${SCRIPTPATH}/lib/install_local_dependencies.sh"
+
 # Load configuration file
 source "${SCRIPTPATH}/lib/load_config_file.sh"
 
@@ -29,6 +36,12 @@ source "${SCRIPTPATH}/lib/build_new_bundle.sh"
 
 # Upload app bundle to remote server
 source "${SCRIPTPATH}/lib/upload_application_bundle.sh"
+
+# Install remote system dependencies
+# 
+# 
+# 
+# source "${SCRIPTPATH}/lib/install_remote_dependencies.sh"
 
 # Deploy app bundle on remote server
 source "${SCRIPTPATH}/lib/deploy_remote_bundle.sh"
