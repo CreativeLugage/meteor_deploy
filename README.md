@@ -11,6 +11,7 @@ Bash script for easy Meteor.js deployment to remote server (Ubuntu with NGINX, P
 - [ ] Expand Android deployment procedure (generate keyfile, prepare for Play Store etc.)
 - [ ] Code cleanup and commenting
 - [ ] Package as .deb file (and/or snap package ?)
+- [ ] Build and publish package website :)
 
 # Install remote server dependencies
 
