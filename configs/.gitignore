@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Prevent ignoring the folder
+!.gitignore
+!.empty
