@@ -13,6 +13,7 @@ Bash script for easy Meteor.js deployment to remote server (Ubuntu with NGINX, P
 - [ ] Package as .deb file (and/or snap package ?)
 - [ ] Build and publish package website :)
 - [ ] Expand the documentation
+- [ ] Do my best to follow [Semantic Versioning 2.0.0](http://semver.org/)
 
 # Install remote server dependencies
 
