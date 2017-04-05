@@ -53,6 +53,7 @@ deploy_remote_bundle()
 			'"
 
 			echo "Done!"
+			meteor_deploy
 		;;
 
 	    [nN][oO]|[nN])
