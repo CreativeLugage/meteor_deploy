@@ -32,6 +32,8 @@ sign_android_apks()
 			
 			echo "Done!"
 
+			meteor_deploy
+
 		;;
 
 	    [nN][oO]|[nN])
